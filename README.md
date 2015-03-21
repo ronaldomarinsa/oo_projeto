@@ -1,10 +1,13 @@
-Cadastro de clientes
+Projeto2:
+=========
+Tipos de clientes
 
-- Crie uma classe com os principais atributos que um cliente deve ter, como nome, cpf, endereço, etc.
+- Agora que você já tem seu cadastro de cliente, você deverá também aceitar clientes Pessoa Jurídica em sua listagem.
 
-- Crie um array de objetos de clientes, com 10 clientes dentro.
+- Não se esqueça de trabalhar com os modificadores de acesso e os getters e setters.
 
-- Crie uma página e faça a listagem geral dos clientes. 
-- Quando clicar sobre o cliente, você deverá mostrar os dados específicos do cliente selecionado.
+- No momento da listagem dos clientes, você deve indicar em uma das colunas se o cliente é pessoa física ou jurídica.
 
-- Nessa listagem você também deverá ter a opção de ordenar os clientes pelo seu índice de forma ascendente e descendente.
+- Ambos os tipos devem implementar uma interface onde seja possível classificar o grau de importância do cliente para a empresa (ex: cliente 1,2,3,5 estrelas).
+
+- Você também terá a opção de criar clientes que utilizam endereço específico de cobrança, nesse caso, crie uma interface para que esses tipos de clientes possam implementar.
