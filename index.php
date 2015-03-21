@@ -1,5 +1,7 @@
 <?php
-require_once "Cliente.php";
+require_once "config.php";
+
+$clientes = preencheArray();
 ?>
 
 <!-- Bootstrap core CSS -->
@@ -34,17 +36,15 @@ require_once "Cliente.php";
                     <a href="?crescente=true" class="btn btn-primary" name="enviar"
                         <?php if (!isset($_GET['decrescente'])) echo "disabled" ?>>Ordem Crescente</a>
                     <a href="?decrescente=true" class="btn btn-warning"
-                        <?php if (isset($_GET['decrescente'])) echo "disabled" ?>>Ordem Descrescente</a>
+                        <?php if (isset($_GET['decrescente'])) echo "disabled" ?>>Ordem Decrescente</a>
                 </td>
             </tr>
             <tr>
-                <th>Nome</th>
-                <th>CPF/CNPJ</th>
-                <th>RG</th>
-                <th>Endereço</th>
-                <th>Cidade</th>
-                <th>Data Nasc.</th>
-                <th>Ações</th>
+                <td class="col-md-2">Nome</td>
+                <td class="col-md-2">Tipo</td>
+                <td class="col-md-2">Endereço</td>
+                <td class="col-md-1">Cidade</td>
+                <td class="col-md-1">Ações</td>
             </tr>
             </thead>
 
@@ -68,21 +68,22 @@ require_once "Cliente.php";
                 echo "<td>";
                 $cliente->exibeDadosCliente();
                 echo "</td>";
-                echo "<td></td>";
-                echo "<td></td>";
-                echo "<td></td>";
-                echo "<td></td>";
-                echo "<td></td>";
+                if ($cliente instanceof \ClientePessoaFisica){
+                    echo "<td>Pessoa Física</td>";
+                }elseif ($cliente instanceof \ClientePessoaJuridica){
+                    echo "<td>Pessoa Jurídica</td>";
+                }
                 echo '<td><a class="btn btn-primary" href="?id=-1'.$ordem.'">'."Esconder</a>";
 
             } else {
-                echo "<td>". $cliente->getNome(). "</td>";
-                echo "<td>". $cliente->getCpf().  "</td>";
-                echo "<td>". $cliente->getRg(). "</td>";
+                echo "<td>". $cliente->getNome() . "</td>";
+                if ($cliente instanceof \ClientePessoaFisica){
+                    echo "<td>Pessoa Física</td>";
+                } elseif ($cliente instanceof \ClientePessoaJuridica) {
+                    echo "<td>Pessoa Jurídica</td>";
+                }
                 echo "<td>". $cliente->getEndereco(). "</td>";
                 echo "<td>". $cliente->getCidade(). "</td>";
-                echo "<td>". $cliente->getDatanasc(). "</td>";
-
                 echo '<td><a class="btn btn-primary" href="?id='.$i.$ordem.'">'."Detalhes</a>";
             }
 
