@@ -7,8 +7,17 @@
  */
 
 interface ClienteInterface {
-    public function defineImportancia($importancia);
 
-    public function defineEnderecoCobranca($endereco_cobranca);
+    public function setNome($nome);
+
+    public function setEndereco($endereco);
+
+    public function setCidade($cidade);
+
+    public function setEnderecoCobranca($enderecoCobranca);
+
+    public function setImportancia($importancia);
+
+    public function setTelefone($telefone);
 
 }

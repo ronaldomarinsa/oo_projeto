@@ -6,7 +6,7 @@
  * Time: 00:14
  */
 
-class ClientePessoaJuridica extends Cliente implements ClienteInterface{
+class ClientePessoaJuridica extends Cliente implements PJ{
     private $cnpj;
     private $insc_est;
     private $data_abertura;
@@ -28,6 +28,7 @@ class ClientePessoaJuridica extends Cliente implements ClienteInterface{
         return $this;
     }
 
+
     /**
      * @return mixed
      */
@@ -35,6 +36,7 @@ class ClientePessoaJuridica extends Cliente implements ClienteInterface{
     {
         return $this->insc_est;
     }
+
 
     /**
      * @param mixed $insc_est
@@ -63,15 +65,6 @@ class ClientePessoaJuridica extends Cliente implements ClienteInterface{
         return $this;
     }
 
-    public function defineImportancia($importancia){
-        $this->setImportancia($importancia);
-        return $this;
-    }
-
-    public function defineEnderecoCobranca($endereco_cobranca){
-        $this->setEnderecoCobranca($endereco_cobranca);
-        return $this;
-    }
 
     public function exibeDadosCliente(){
         parent::exibeDadosCliente();

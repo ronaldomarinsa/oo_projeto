@@ -14,9 +14,10 @@ function preencheArray(){
         ->setCidade("Recife")
         ->setCpf("88949452294")
         ->setRg("466456")
+        ->setTelefone("3455-9898")
         ->setDatanasc("05/06/1977");
-    $objcli->defineEnderecoCobranca($objcli->getEndereco());
-    $objcli->defineImportancia(3);
+    $objcli->setEnderecoCobranca($objcli->getEndereco());
+    $objcli->setImportancia(3);
 
     $clientes[] = $objcli;
 
@@ -28,9 +29,10 @@ function preencheArray(){
         ->setCidade("Recife")
         ->setCnpj("55363634634643")
         ->setInscEst("314343333")
+        ->setTelefone("9988-9898")
         ->setDataAbertura("14/03/2005");
-    $objcli->defineEnderecoCobranca($objcli->getEndereco());
-    $objcli->defineImportancia(5);
+    //$objcli->setEnderecoCobranca($objcli->getEndereco());
+    $objcli->setImportancia(5);
 
     $clientes[] = $objcli;
 
@@ -42,9 +44,10 @@ function preencheArray(){
         ->setCidade("Afogados")
         ->setCnpj("55363634645643")
         ->setInscEst("3143433456")
+        ->setTelefone("9877-9898")
         ->setDataAbertura("21/01/2003");
-    $objcli->defineEnderecoCobranca("Rua da Lapa, 344343 - RJ");
-    $objcli->defineImportancia(6);
+    $objcli->setEnderecoCobranca("Rua da Lapa, 344343 - RJ");
+    $objcli->setImportancia(6);
 
     $clientes[] = $objcli;
 
@@ -56,9 +59,10 @@ function preencheArray(){
         ->setCidade("Recife")
         ->setCpf("88949566753")
         ->setRg("4628344")
+        ->setTelefone("3268-8338")
         ->setDatanasc("10/03/1981");
-    $objcli->defineEnderecoCobranca($objcli->getEndereco());
-    $objcli->defineImportancia(7);
+    //$objcli->setEnderecoCobranca($objcli->getEndereco());
+    $objcli->setImportancia(7);
 
     $clientes[] = $objcli;
 
@@ -70,9 +74,10 @@ function preencheArray(){
         ->setCidade("Recife")
         ->setCpf("88949382294")
         ->setRg("466778")
+        ->setTelefone("8776-9821")
         ->setDatanasc("11/11/1971");
-    $objcli->defineEnderecoCobranca($objcli->getEndereco());
-    $objcli->defineImportancia(7);
+    $objcli->setEnderecoCobranca($objcli->getEndereco());
+    $objcli->setImportancia(7);
 
     $clientes[] = $objcli;
 
@@ -84,9 +89,10 @@ function preencheArray(){
         ->setCidade("Recife")
         ->setCpf("88949382333")
         ->setRg("466112")
+        ->setTelefone("3455-9891")
         ->setDatanasc("07/12/1984");
-    $objcli->defineEnderecoCobranca("Rua Gervasio Pires, 4554 - Imbiribeira");
-    $objcli->defineImportancia(5);
+    //$objcli->setEnderecoCobranca("Rua Gervasio Pires, 4554 - Imbiribeira");
+    $objcli->setImportancia(5);
 
     $clientes[] = $objcli;
 
@@ -98,9 +104,10 @@ function preencheArray(){
         ->setCidade("Recife")
         ->setCnpj("12599834634643")
         ->setInscEst("314343312")
+        ->setTelefone("3455-1221")
         ->setDataAbertura("17/05/2001");
-    $objcli->defineEnderecoCobranca($objcli->getEndereco());
-    $objcli->defineImportancia(4);
+    $objcli->setEnderecoCobranca($objcli->getEndereco());
+    $objcli->setImportancia(4);
 
     $clientes[] = $objcli;
 
@@ -112,9 +119,10 @@ function preencheArray(){
         ->setCidade("Carpina")
         ->setCnpj("12599677734983")
         ->setInscEst("314344498")
+        ->setTelefone("3455-4443")
         ->setDataAbertura("27/08/2001");
-    $objcli->defineEnderecoCobranca($objcli->getEndereco());
-    $objcli->defineImportancia(4);
+    //$objcli->setEnderecoCobranca($objcli->getEndereco());
+    $objcli->setImportancia(4);
 
     $clientes[] = $objcli;
 
@@ -126,9 +134,10 @@ function preencheArray(){
         ->setCidade("Recife")
         ->setCnpj("56678674734983")
         ->setInscEst("3567774498")
+        ->setTelefone("2233-1267")
         ->setDataAbertura("02/10/1979");
-    $objcli->defineEnderecoCobranca($objcli->getEndereco());
-    $objcli->defineImportancia(1);
+    $objcli->setEnderecoCobranca($objcli->getEndereco());
+    $objcli->setImportancia(1);
 
     $clientes[] = $objcli;
 
@@ -140,9 +149,10 @@ function preencheArray(){
         ->setCidade("Recife")
         ->setCpf("8894934000")
         ->setRg("400012")
+        ->setTelefone("9801-0423")
         ->setDatanasc("07/01/1991");
-    $objcli->defineEnderecoCobranca("Rua da Concordias, 1144 - Centro");
-    $objcli->defineImportancia(5);
+    $objcli->setEnderecoCobranca("Rua da Concordias, 1144 - Centro");
+    $objcli->setImportancia(5);
 
     $clientes[] = $objcli;
 

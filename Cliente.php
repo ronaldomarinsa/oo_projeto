@@ -6,13 +6,14 @@
  * Time: 00:34
  */
 
-class Cliente {
+class Cliente{
 
     private $nome;
     private $endereco;
     private $cidade;
-    private $endereco_cobranca;
+    private $enderecoCobranca;
     private $importancia;
+    private $telefone;
 
 
     /**
@@ -56,7 +57,6 @@ class Cliente {
     public function getCidade()
     {
         return $this->cidade;
-        return $this;
     }
 
     /**
@@ -73,15 +73,15 @@ class Cliente {
      */
     public function getEnderecoCobranca()
     {
-        return $this->endereco_cobranca;
+        return $this->enderecoCobranca;
     }
 
     /**
      * @param mixed $endereco_cobranca
      */
-    public function setEnderecoCobranca($endereco_cobranca)
+    public function setEnderecoCobranca($enderecoCobranca)
     {
-        $this->endereco_cobranca = $endereco_cobranca;
+        $this->enderecoCobranca = $enderecoCobranca;
         return $this;
     }
 
@@ -102,11 +102,22 @@ class Cliente {
         return $this;
     }
 
+    public function setTelefone($telefone){
+        $this->telefone = $telefone;
+        return $this;
+    }
+
+    public function getTelefone(){
+        return $this->telefone;
+    }
+
+
 
     public function exibeDadosCliente(){
         echo "NOME:     ". $this->getNome() ."<br>";
         echo "ENDEREÇO: ". $this->getEndereco() ."<br>";
         echo "CIDADE:   ". $this->getCidade() ."<br>";
+        echo "FONE:     ". $this->getTelefone() . "<br>";
         if (strlen($this->getEnderecoCobranca()) > 10){
             echo "ENDEREÇO COBRANÇA: ".$this->getEnderecoCobranca()."<br>";
         }

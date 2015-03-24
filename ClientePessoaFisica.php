@@ -6,7 +6,7 @@
  * Time: 00:14
  */
 
-class ClientePessoaFisica extends Cliente implements ClienteInterface{
+class ClientePessoaFisica extends Cliente implements PF{
     private $cpf;
     private $rg;
     private $datanasc;
@@ -59,16 +59,6 @@ class ClientePessoaFisica extends Cliente implements ClienteInterface{
     public function setDatanasc($datanasc)
     {
         $this->datanasc = $datanasc;
-        return $this;
-    }
-
-    public function defineImportancia($importancia){
-        $this->setImportancia($importancia);
-        return $this;
-    }
-
-    public function defineEnderecoCobranca($endereco_cobranca){
-        $this->setEnderecoCobranca($endereco_cobranca);
         return $this;
     }
 
