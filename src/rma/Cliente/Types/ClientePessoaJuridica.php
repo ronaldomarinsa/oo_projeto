@@ -5,8 +5,12 @@
  * Date: 17/03/15
  * Time: 00:14
  */
+namespace rma\Cliente\Types;
 
-class ClientePessoaJuridica extends Cliente implements PJ{
+use rma\Cliente\ClienteAbstract as ClienteAbstract;
+use rma\Cliente\Types\ClienteInterface as ClienteInterface;
+
+class ClientePessoaJuridica extends ClienteAbstract implements ClienteInterface{
     private $cnpj;
     private $insc_est;
     private $data_abertura;

@@ -1,12 +1,12 @@
 <?php
-require_once 'config.php';
+require_once 'src/rma/Cliente/Util/config.php';
 
 $clientes = preencheArray();
 ?>
 
 <!-- Bootstrap core CSS -->
-<link href="css/bootstrap.min.css" rel="stylesheet">
-<script src="js/bootstrap.min.js"></script>
+<link href="assets/css/bootstrap.min.css" rel="stylesheet">
+<script src="assets/js/bootstrap.min.js"></script>
 <script src="http://code.jquery.com/jquery.js"></script>
 
 
@@ -47,17 +47,17 @@ $clientes = preencheArray();
                     echo "<td>";
                     $cliente->exibeDadosCliente();
                     echo "</td>";
-                    if ($cliente instanceof \ClientePessoaFisica){
+                    if ($cliente instanceof rma\Cliente\Types\ClientePessoaFisica){
                         echo "<td>Pessoa Física</td>";
-                    } elseif ($cliente instanceof \ClientePessoaJuridica){
+                    } elseif ($cliente instanceof rma\Cliente\Types\ClientePessoaJuridica){
                         echo "<td>Pessoa Jurídica</td>";
                     }
                     echo '<td><a class="btn btn-primary" href="?id=-1'.$ordem.'">'."Esconder</a>";
                 } else {
                     echo "<td>".$cliente->getNome()."</td>";
-                    if ($cliente instanceof \ClientePessoaFisica){
+                    if ($cliente instanceof rma\Cliente\Types\ClientePessoaFisica){
                         echo "<td>Pessoa Física</td>";
-                    } elseif ($cliente instanceof \ClientePessoaJuridica) {
+                    } elseif ($cliente instanceof rma\Cliente\Types\ClientePessoaJuridica) {
                         echo "<td>Pessoa Jurídica</td>";
                     }
                     echo '<td><a class="btn btn-primary" href="?id='.$i.$ordem.'">'."Detalhes</a>";

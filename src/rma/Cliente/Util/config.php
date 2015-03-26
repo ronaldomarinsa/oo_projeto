@@ -1,5 +1,5 @@
 <?php
-define('CLASS_DIR','/');
+define('CLASS_DIR','src/');
 set_include_path(get_include_path().PATH_SEPARATOR.CLASS_DIR);
 spl_autoload_register();
 
@@ -7,7 +7,7 @@ function preencheArray(){
 
     $clientes = array();
 
-    $objcli = new ClientePessoaFisica();
+    $objcli = new rma\Cliente\Types\ClientePessoaFisica();
     $objcli
         ->setNome("Magrão")
         ->setEndereco("Rua da Hora, 456")
@@ -22,7 +22,7 @@ function preencheArray(){
     $clientes[] = $objcli;
 
 
-    $objcli = new ClientePessoaJuridica();
+    $objcli = new rma\Cliente\Types\ClientePessoaJuridica();
     $objcli
         ->setNome("Vitor")
         ->setEndereco("Rua da Guia, 12")
@@ -37,7 +37,7 @@ function preencheArray(){
     $clientes[] = $objcli;
 
 
-    $objcli = new ClientePessoaJuridica();
+    $objcli = new rma\Cliente\Types\ClientePessoaJuridica();
     $objcli
         ->setNome("Everton Pascoa")
         ->setEndereco("Rua da Lama, 1456")
@@ -52,7 +52,7 @@ function preencheArray(){
     $clientes[] = $objcli;
 
 
-    $objcli = new ClientePessoaFisica();
+    $objcli = new rma\Cliente\Types\ClientePessoaFisica();
     $objcli
         ->setNome("Durval")
         ->setEndereco("Av Boa Viagem, 2256")
@@ -67,7 +67,7 @@ function preencheArray(){
     $clientes[] = $objcli;
 
 
-    $objcli = new ClientePessoaFisica();
+    $objcli = new rma\Cliente\Types\ClientePessoaFisica();
     $objcli
         ->setNome("Rithely")
         ->setEndereco("Av Boa Viagem, 2236")
@@ -82,7 +82,7 @@ function preencheArray(){
     $clientes[] = $objcli;
 
 
-    $objcli = new ClientePessoaFisica();
+    $objcli = new rma\Cliente\Types\ClientePessoaFisica();
     $objcli
         ->setNome("Rene")
         ->setEndereco("Av Boa Viagem, 2236")
@@ -97,7 +97,7 @@ function preencheArray(){
     $clientes[] = $objcli;
 
 
-    $objcli = new ClientePessoaJuridica();
+    $objcli = new rma\Cliente\Types\ClientePessoaJuridica();
     $objcli
         ->setNome("Mancha")
         ->setEndereco("Rua da Guia, 12")
@@ -112,7 +112,7 @@ function preencheArray(){
     $clientes[] = $objcli;
 
 
-    $objcli = new ClientePessoaJuridica();
+    $objcli = new rma\Cliente\Types\ClientePessoaJuridica();
     $objcli
         ->setNome("Elber")
         ->setEndereco("Rua Coruripe, 44")
@@ -127,7 +127,7 @@ function preencheArray(){
     $clientes[] = $objcli;
 
 
-    $objcli = new ClientePessoaJuridica();
+    $objcli = new rma\Cliente\Types\ClientePessoaJuridica();
     $objcli
         ->setNome("Diego Souza")
         ->setEndereco("Av. Boa Viagem, 9844")
@@ -142,7 +142,7 @@ function preencheArray(){
     $clientes[] = $objcli;
 
 
-    $objcli = new ClientePessoaFisica();
+    $objcli = new rma\Cliente\Types\ClientePessoaFisica();
     $objcli
         ->setNome("Felipe Azevedo")
         ->setEndereco("Av Arthur Lundreguem, 126")

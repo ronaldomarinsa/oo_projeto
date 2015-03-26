@@ -6,7 +6,13 @@
  * Time: 00:14
  */
 
-class ClientePessoaFisica extends Cliente implements PF{
+namespace rma\Cliente\Types;
+
+use rma\Cliente\ClienteAbstract as ClienteAbstract;
+use rma\Cliente\Types\ClienteInterface as ClienteInterface;
+
+class ClientePessoaFisica extends ClienteAbstract implements ClienteInterface{
+
     private $cpf;
     private $rg;
     private $datanasc;

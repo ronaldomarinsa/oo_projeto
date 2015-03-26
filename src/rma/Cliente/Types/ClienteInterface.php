@@ -5,6 +5,7 @@
  * Date: 17/03/15
  * Time: 00:19
  */
+namespace rma\Cliente\Types;
 
 interface ClienteInterface {
 

@@ -5,8 +5,9 @@
  * Date: 12/03/15
  * Time: 00:34
  */
+namespace rma\Cliente;
 
-class Cliente{
+abstract class ClienteAbstract{
 
     private $nome;
     private $endereco;
